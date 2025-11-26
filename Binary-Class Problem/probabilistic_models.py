@@ -8,7 +8,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.feature_selection import SelectKBest, f_classif
-# Models
+# Models (Restricted to requested list)
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
@@ -52,7 +52,7 @@ y = train_df['RiskFlag']
 # ==========================================
 # 2. PREPROCESSING PIPELINE
 # ==========================================
-# Identify columns from Training data
+# Identify columns
 numeric_features = X.select_dtypes(include=['int64', 'float64']).columns
 categorical_features = X.select_dtypes(include=['object']).columns
 
@@ -120,7 +120,7 @@ for name, model in models.items():
 print(f"\nWinner: {best_model_name} ({best_score:.4f})")
 
 # ==========================================
-# 4. GENERATE SUBMISSION
+# 4. GENERATE SUBMISSION (FIXED)
 # ==========================================
 print("\n" + "="*40)
 print(f" STEP 3: GENERATING SUBMISSION ({best_model_name})")
@@ -141,15 +141,15 @@ print(f"Retraining {best_model_name} on 100% of data...")
 final_model = models[best_model_name]
 final_model.fit(X_full_sel, y)
 
-# 4. Predict Probabilities
-print("Predicting on Test data...")
-probs = final_model.predict_proba(X_test_sel)[:, 1]
+# 4. Predict CLASSES (0 or 1) instead of Probabilities
+print("Predicting Classes (0/1) on Test data...")
+preds = final_model.predict(X_test_sel)
 
 # 5. Save
 submission = pd.DataFrame({
     'ProfileID': test_ids,
-    'RiskFlag': probs
+    'RiskFlag': preds
 })
 submission.to_csv('submission.csv', index=False)
-print("Success! 'submission.csv' has been saved.")
+print("Success! 'submission.csv' has been saved with binary labels.")
 print(submission.head())
