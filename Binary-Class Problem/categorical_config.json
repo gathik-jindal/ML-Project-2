@@ -1,0 +1,38 @@
+{
+    "QualificationLevel": [
+        "PhD",
+        "High School",
+        "Master's",
+        "Bachelor's"
+    ],
+    "WorkCategory": [
+        "Self-employed",
+        "Part-time",
+        "Unemployed",
+        "Full-time"
+    ],
+    "RelationshipStatus": [
+        "Single",
+        "Divorced",
+        "Married"
+    ],
+    "OwnsProperty": [
+        "Yes",
+        "No"
+    ],
+    "FamilyObligation": [
+        "Yes",
+        "No"
+    ],
+    "FundUseCase": [
+        "Home",
+        "Education",
+        "Business",
+        "Other",
+        "Auto"
+    ],
+    "JointApplicant": [
+        "No",
+        "Yes"
+    ]
+}
