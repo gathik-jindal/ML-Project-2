@@ -6,3 +6,4 @@ scipy
 seaborn
 scipy
 jinja2
+tensorflow
