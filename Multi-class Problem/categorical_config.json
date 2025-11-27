@@ -1,0 +1,90 @@
+{
+    "age_group": [
+        "25-44",
+        "45-64",
+        "65+",
+        "18-24",
+        "<18"
+    ],
+    "travel_companions": [
+        "Alone",
+        "With Spouse",
+        "With Other Friends/Relatives",
+        "With Spouse and Children",
+        "With Children"
+    ],
+    "main_activity": [
+        "Widlife Tourism",
+        "Cultural Tourism",
+        "Wildlife Tourism",
+        "Beach Tourism",
+        "Hunting Tourism",
+        "Conference Tourism",
+        "Mountain Climbing",
+        "Business",
+        "Bird Tourism",
+        "Diving and Sport Fishing"
+    ],
+    "visit_purpose": [
+        "Business",
+        "Leisure and Holidays",
+        "Visiting Friends and Relatives",
+        "Meetings and Conference",
+        "Volunteering",
+        "Scientific and Academic",
+        "Other",
+        "Medical"
+    ],
+    "is_first_visit": [
+        "No",
+        "Yes"
+    ],
+    "tour_type": [
+        "Independent",
+        "Package Tour"
+    ],
+    "intl_transport_included": [
+        "No",
+        "Yes"
+    ],
+    "info_source": [
+        "Friends, relatives",
+        "Travel agent, tour operator",
+        "Others",
+        "Radio, TV, Web",
+        "Newspaper, magazines, brochures",
+        "Trade fair",
+        "Mexican Mission Abroad",
+        "Inflight magazines"
+    ],
+    "accomodation_included": [
+        "No",
+        "Yes"
+    ],
+    "food_included": [
+        "No",
+        "Yes"
+    ],
+    "domestic_transport_included": [
+        "No",
+        "Yes"
+    ],
+    "sightseeing_included": [
+        "No",
+        "Yes"
+    ],
+    "guide_included": [
+        "No",
+        "Yes"
+    ],
+    "insurance_included": [
+        "No",
+        "Yes"
+    ],
+    "total_trip_days": [
+        "15-30",
+        "1-6",
+        "30+",
+        "7-14"
+    ]
+}
